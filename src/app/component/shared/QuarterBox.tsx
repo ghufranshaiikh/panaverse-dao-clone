@@ -18,7 +18,7 @@ const QuarterBox:FC<iprops> = ({number,paragarph,heading,haveborder=true}) => {
 
                             </div>
                  
-            <div className="text-7xl md:text-9xl w-[30%] md:w-[40%] font-black text-gray-400">
+            <div className="text-7xl  md:text-9xl w-[30%] md:w-[40%] font-black text-gray-400">
                  {number}
              </div>
              <div className="w-[70%] md:w-[60%]  ">

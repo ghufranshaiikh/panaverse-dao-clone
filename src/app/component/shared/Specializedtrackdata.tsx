@@ -124,13 +124,14 @@ export const programsdata=[
         {
             programsdata.map((item)=>{
                 return(
-                    <div>
+                    <div >
                     <div> 
-                        <Image src={item.image} alt="images "/>
-                    </div>
-                    <div>
                       <h3 className="text-teal-800 font-medium text-lg">Specialized Track</h3>
-                      <h1 className="text-3xl  ">{item.heading}</h1>
+                    </div>
+                    <div className="flex gap-x-4">
+                        <Image className=" h-24 object-cover rounded-md " src={item.image} alt="images "/>
+                      <h1 className="text-xl  font-semibold">{item.heading}</h1>
+
                       </div>
                       </div>
                 )

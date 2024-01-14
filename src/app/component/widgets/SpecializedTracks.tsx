@@ -1,21 +1,23 @@
 
 import QuarterBox from "../shared/QuarterBox";
 import Wrapper from "../shared/Wrapper";
-import Specializedtrackdata from "../shared/specializedtrackdata";
-
+import Specializedtrackdata from "@/app/component/shared/Specializedtrackdata";
+import { programsdata } from "@/app/component/shared/Specializedtrackdata";
+import Image from "next/image";
 
 
 const SpecializedTracks = () => {
     return (
         <section>
             <Wrapper>
-              <div>
+              <div className="">
                 <div>
                     <h1 className="text-3xl md:text-5xl font-bold">Specialized Tracks:</h1>
                     <p className="text-sm md:text-lg text-slate-600 mt-3 w-[80%] md:w-2/4 ">After completing the first three quarters the participants will select one or more specializations consisting of two courses each.</p>
                 </div>
-                <div className="mt-10 flex gap-x-5 flex-col-reverse md:flex-row">
-                    <div className="border border-slate-300 rounded-xl px-8 py-8 basis-8/12 shadow-xl">
+                   {/* content left */}
+                <div className="mt-10 flex gap-x-5 flex-col lg:flex-row md:flex-1 md:flex-col">
+                    <div className="border border-slate-300 rounded-xl px-8 py-8 basis-6/12 md:basis-8/12 shadow-xl ">
                         <h4 className="text-[#00616c] font-semibold text-lg">Specialized Track</h4>
                         <h1 className="text-3xl font-bold mt-2 w-3/4">Web 3.0 (Blockchain) and Metaverse Specialization</h1>
                         <p className="text-slate-600 mt-3">This Web 3.0 and Metaverse specialization focuses on developing full-stack Web 3.0 and Metaverse experiences for the next generation of the internet by specializing in building worlds that merge the best of cutting-edge decentralized distributed blockchains with 3D metaverse client experiences.</p>
@@ -43,8 +45,29 @@ const SpecializedTracks = () => {
                          </div>  
                     </div>
                      {/* content right */}
-                    <div className="h-screen w-10 basis-4/12">
-                    <Specializedtrackdata/>
+                    <div className="px-2  space-y-4 basis-6/12 md:basis-4/12 mt-10 lg:mt-0 ">
+                    {
+                        programsdata.map((item,i)=>{
+                            return (
+                                   <div>
+                                    <div key={i} className="flex gap-x-4 items-center  cursor-pointer">
+                                    <div className="w-[50%] md:w-[40%]" >
+                                        <Image className={" h-24 w-52 object-cover rounded-md "} src={item.image} alt="images " />
+                                    </div>
+                                    <div className="w-[50%] md:w-[60%]">
+                                        <h3 className="text-teal-800 font-medium text-sm md:text-lg">Specialized Track</h3>
+                                        <h1 className="text-sm sm:text-base   font-semibold mt-1 ">{item.heading}</h1>
+
+                                    </div>
+                                    </div>
+                                    <div className="w-full border-b border-slate-200 mt-5 mb-5"></div>
+                                    </div>
+                                    
+                              
+                            );
+                        }
+                        )
+                    }
 
                     </div>
                 </div>
