@@ -4,8 +4,10 @@ import Link from "next/link"
 import Wrapper from "@/app/component/shared/Wrapper"
 const Header = () => {
   return (
-   <header className="sticky top-0 z-10 backdrop-blur-xl  bg-[#ffffff9d] ">
-      <div className="  "></div>
+      
+     <header className="sticky top-0 z-10 backdrop-blur-xl  bg-[#ffffff9d] ">
+     
+   
        <Wrapper>
      <div className="flex justify-between items-center   py-5 ">
         <div>
