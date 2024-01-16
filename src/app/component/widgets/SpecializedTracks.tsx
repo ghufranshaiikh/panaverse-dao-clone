@@ -1,7 +1,6 @@
 "use client"
 import QuarterBox from "../shared/QuarterBox";
 import Wrapper from "../shared/Wrapper";
-import Specializedtrackdata from "@/app/component/shared/Specializedtrackdata";
 import { programsdata } from "@/app/component/shared/Specializedtrackdata";
 import Image from "next/image";
 import { useState } from "react";
@@ -55,10 +54,10 @@ const SpecializedTracks = () => {
                      {/* content right */}
                     <div className="px-2  space-y-4 basis-6/12 md:basis-4/12 mt-10 lg:mt-0 ">
                     {
-                        programsdata.map((item,i)=>{
+                        programsdata.map((item)=>{
                             return (
-                                   <div>
-                                    <div onClick={()=>setSlectedItem(item.slug)} key={item.slug} className="flex gap-x-4 items-center  cursor-pointer">
+                                   <div key={item.slug}>
+                                    <div onClick={()=>setSlectedItem(item.slug)}  className="flex gap-x-4 items-center  cursor-pointer">
                                     <div className="flex-shrink-0 h-24 w-36" >
                                         <Image className={" h-24 w-36 object-cover rounded-md "} src={item.image} alt="images " />
                                     </div>

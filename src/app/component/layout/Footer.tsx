@@ -22,8 +22,8 @@ const Footer = () => {
                 <h2 className="text-2xl font-semibold my-3">Compulsory Quarters</h2>
                 <Link className="my-3 cursor-pointer" href="#">
                     {
-                        Compulsorydata.map((item)=>(
-                            <h3 className="truncate ... text-zinc-500 hover:text-zinc2 hover:scale-[1.02] transition-all duration-500">
+                        Compulsorydata.map((item,i)=>(
+                            <h3 key={i} className="truncate ... text-zinc-500 hover:text-zinc2 hover:scale-[1.02] transition-all duration-500">
                              {item}
                             </h3>
                         ))
@@ -36,8 +36,8 @@ const Footer = () => {
                <h3 className="text-2xl font-semibold">Specialization Tracks</h3>
                <Link className="my-3 cursor-pointer" href="#">
                     {
-                        Specializationdata.map((item)=>(
-                            <h3 className=" text-zinc-500 hover:text-zinc2 hover:scale-[1.02] transition-all duration-500">
+                        Specializationdata.map((item ,i)=>(
+                            <h3 key={i} className=" text-zinc-500 hover:text-zinc2 hover:scale-[1.02] transition-all duration-500">
                              {item}
                             </h3>
                         ))
