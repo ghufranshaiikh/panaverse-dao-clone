@@ -29,10 +29,10 @@ const CoreTracks = () => {
             <Wrapper>
 
                 <div>
-                    <h2 className="text-xl text-teal-800 font-bold ">Program of Studies</h2>
-                    <h1 className="text-4xl sm:5xl font-bold leading-tight  "> <span className="block">Core Courses</span>
+                    <h2 className="text-3xl md:text-4xl font-bold "> <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8636d1] via-extraordinary to-[#e0698c]">Compulsory</span> Courses </h2>
+                    <h1 className="text-xl sm:2xl font-bold mt-3"> Core Courses
                         (Common in All Specializations)</h1>
-                    <p className="text-lg text-slate-700 mt-5 max-w-[80%]">Every participant of the program will start by completing the following three core courses.</p>
+                    <p className="text-lg text-slate-700  max-w-[80%]">Every participant of the program will start by completing the following three core courses.</p>
                     <div className="mt-7">
                         <Btn text="Enroll Now" />
                     </div>
